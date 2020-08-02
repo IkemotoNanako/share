@@ -3,10 +3,10 @@
     <div class="card">
         <p>{{value}}</p>
         <div class="form">
-            <input placeholder="ユーザーネーム" type="text" v-if="value==='新規登録'">
-            <input placeholder="プロフィール" type="text" v-if="value==='新規登録'">
-            <input placeholder="メールアドレス" type="email" />
-            <input placeholder="パスワード" type="password" /> 
+            <input placeholder="ユーザーネーム" type="text" v-model="name" v-if="value==='新規登録'">
+            <input placeholder="プロフィール" type="text" v-model="profile"  v-if="value==='新規登録'">
+            <input placeholder="メールアドレス" type="email" v-model="email" />
+            <input placeholder="パスワード" type="password" v-model="password" /> 
             <button @click="auth">{{value}}</button>
         </div>
     </div>
